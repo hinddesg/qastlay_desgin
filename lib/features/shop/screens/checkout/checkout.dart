@@ -4,8 +4,10 @@ import 'package:qastlay/features/shop/screens/cart/widgets/cart_items.dart';
 import 'package:qastlay/features/shop/screens/checkout/widgets/information_details.dart';
 import 'package:qastlay/features/shop/screens/checkout/widgets/installment_plan.dart';
 import 'package:qastlay/features/shop/screens/checkout/widgets/total_order.dart';
+import 'package:qastlay/utils/constants/colors.dart';
 import 'package:qastlay/utils/constants/image_strings.dart';
 import 'package:qastlay/utils/constants/sizes.dart';
+import 'package:qastlay/utils/functions/helper_function.dart';
 import '../../../../common/widgets/appbar/appbar.dart';
 import '../../../../common/widgets/custom_shapes/container/rounded_container.dart';
 import '../../../../common/widgets/success_screen/success_screen.dart';
@@ -17,6 +19,8 @@ class CheckoutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+        final dark = CustomHelperFunctions.isDarkMode(context);
+
     return Scaffold(
       appBar: CustomAppbar(
         automaticallyImplyLeading: true,
@@ -31,6 +35,7 @@ class CheckoutScreen extends StatelessWidget {
               const CartItems(showAddRemoveButtons: false,),
               const SizedBox (height: CustomSizes.spaceEtwSections),
               RoundedContainer(
+                backgroundColor: dark ? CustomColors.dark : CustomColors.white,
                 showBorder: true,
                 child: Padding(
                   padding: const EdgeInsets.all(CustomSizes.defaultSpace),
