@@ -19,6 +19,7 @@ class CustomElevatedButtonTheme {
     ),
   );
 
+  //-- dark theme
   static final darkElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
         elevation: 0,

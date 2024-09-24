@@ -9,12 +9,13 @@ class SuccessScreen extends StatelessWidget {
     super.key,
     required this.image,
     required this.title,
-    required this.subTitle,
+     required this.subTitle,
     required this.onPressed,
-    required this.buttonText
+     // this.buttonText
   });
 
-  final String image, title, subTitle,buttonText;
+  final String image, title, subTitle;
+  // final String? buttonText;
   final VoidCallback onPressed;
 
   @override
@@ -28,7 +29,7 @@ class SuccessScreen extends StatelessWidget {
             ///Image
             Image(
               image:  AssetImage(image),
-              width: CustomHelperFunctions.screenWidth() * 0.7,),
+              width: CustomHelperFunctions.screenWidth() * 0.6,),
             const SizedBox(height: CustomSizes.spaceEtwSections),
 
             ///Title $ SubTitle
@@ -41,7 +42,7 @@ class SuccessScreen extends StatelessWidget {
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed:onPressed, child:  Text(buttonText))
+                    onPressed:onPressed, child:  const Text('Continue'))
             ),
           ],
         ),
@@ -49,4 +50,5 @@ class SuccessScreen extends StatelessWidget {
       ),
     );
   }
+
 }

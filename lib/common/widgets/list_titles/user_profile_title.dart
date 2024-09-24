@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:qastlay/features/personalization/controllers/user_controller.dart';
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/image_strings.dart';
 import '../images/circular_image.dart';
@@ -12,11 +13,12 @@ class UserProfileTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = UserController.instance;
     return ListTile(
-      leading:  const CircularImage(
+      leading:   const CircularImage(
         image: CustomImages.user, width: 50, height: 50,padding: 0, ),
-      title:Text('Account',style: Theme.of(context).textTheme.headlineSmall!.apply(color: CustomColors.white,),),
-      subtitle:Text('suppor@hind.com',style: Theme.of(context).textTheme.bodyMedium!.apply(color: CustomColors.white,),),
+      title:Text(controller.user.value.fullName,style: Theme.of(context).textTheme.headlineSmall!.apply(color: CustomColors.white,),),
+      subtitle:Text(controller.user.value.email,style: Theme.of(context).textTheme.bodyMedium!.apply(color: CustomColors.white,),),
       trailing: IconButton(onPressed: onPressed, icon: const Icon(Iconsax.edit,color: CustomColors.white,),),
     );
   }

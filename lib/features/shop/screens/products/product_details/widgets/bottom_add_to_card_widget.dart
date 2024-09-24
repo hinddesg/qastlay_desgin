@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:qastlay/features/shop/screens/cart/cart.dart';
 import '../../../../../../common/widgets/icons/circular_icon.dart';
 import '../../../../../../utils/constants/colors.dart';
 import '../../../../../../utils/constants/sizes.dart';
@@ -21,7 +24,8 @@ class BottomAddToCard extends StatelessWidget {
             borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(CustomSizes.cardRadiusLg),
               topRight: Radius.circular(CustomSizes.cardRadiusLg),
-            )),
+            )
+        ),
 
         child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,7 +39,6 @@ class BottomAddToCard extends StatelessWidget {
               height: 40,
               color: CustomColors.white,
             ),
-            // TCircularIcon
             const SizedBox(width: CustomSizes.spaceBtwItems),
             Text('2', style: Theme.of(context).textTheme.titleSmall),
             const SizedBox(width: CustomSizes.spaceBtwItems),
@@ -48,14 +51,14 @@ class BottomAddToCard extends StatelessWidget {
             ),
               ]),
             ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const CartScreen()),
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.all(CustomSizes.md),
                   backgroundColor: CustomColors.black,
                   side: const BorderSide (color: CustomColors.black),
                 ), child: const Row(
                   children: [
-                    Icon(Iconsax.shopping_bag),
+                    Icon(Iconsax.shopping_cart),
                     SizedBox(width: 10,),
                     Text('Add to Cart'),
                   ],

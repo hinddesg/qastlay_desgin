@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:qastlay/common/widgets/appbar/appbar.dart';
 import 'package:qastlay/features/shop/screens/cart/widgets/cart_items.dart';
-import '../../../../../common/widgets/appbar/appbar.dart';
-import '../../../../../utils/constants/sizes.dart';
+import 'package:qastlay/utils/constants/sizes.dart';
 import '../checkout/checkout.dart';
 
 class CartScreen extends StatelessWidget {
@@ -13,6 +12,7 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
         appBar: CustomAppbar(
+            showBackArrow: true,
             automaticallyImplyLeading:true,
             title: Text('Cart', style: Theme.of(context).textTheme.headlineSmall)),
         body: const Padding(

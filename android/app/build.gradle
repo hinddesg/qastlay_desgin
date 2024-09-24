@@ -1,5 +1,8 @@
 plugins {
     id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
     id "kotlin-android"
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id "dev.flutter.flutter-gradle-plugin"
@@ -38,7 +41,7 @@ android {
         applicationId = "com.example.qastlay"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdk = flutter.minSdkVersion
+        minSdk = 23
         targetSdk = flutter.targetSdkVersion
         versionCode = flutterVersionCode.toInteger()
         versionName = flutterVersionName
@@ -52,6 +55,16 @@ android {
         }
     }
 }
+
+dependencies {
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
+    implementation(platform("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10"))
+    implementation platform('com.google.firebase:firebase-bom:32.7.0')
+//    id 'com.google.gms.google-services' version '4.4.0' apply false
+
+}
+//implementation(platform("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10"))
+//implementation platform('com.google.firebase:firebase-bom:32.2.0')
 
 flutter {
     source = "../.."

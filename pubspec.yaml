@@ -41,11 +41,20 @@ dependencies:
   smooth_page_indicator: any
   carousel_slider: any
   intl: any
-  get_storage: any
   logger: any
   flutter_rating_bar: ^4.0.1
   flutter_native_splash: ^2.4.1
   readmore: ^3.0.0
+  firebase_core: ^3.4.1
+  get_storage: ^2.1.1
+  lottie: ^3.1.2
+#  connectivity_plus: ^6.0.5
+  connectivity_plus: ^5.0.1
+  firebase_auth: ^5.3.0
+  cloud_firestore: ^5.4.2
+  google_sign_in: ^6.2.1
+  shimmer: ^3.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -72,7 +81,11 @@ flutter_icons:
   # Icons
   iconsax: ^0.0.8
   cupertino_icons: ^1.0.8
-
+  firebase_messaging: ^15.1.2
+  dependencies:
+  flutter_spinkit: ^5.2.1
+  modal_bottom_sheet: ^3.0.0
+  uuid: ^4.5.0
   # State Management
   get: ^4.6.6
   get_storage: ^2.1.1
@@ -116,6 +129,8 @@ flutter:
     - assets/images/reviews/
     - assets/images/payment/
     - assets/images/success/
+    - assets/images/animations/
+    - assets/images/signup/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

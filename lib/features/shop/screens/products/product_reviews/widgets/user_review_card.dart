@@ -29,7 +29,7 @@ class UserReviewCard extends StatelessWidget {
         ),
         const SizedBox(height: CustomSizes.spaceBtwItems),
         const ReadMoreText(
-          'The user interface of the app is quite intuitive. I was able to navigate and make purchases seamlessly. Great job!',
+          'Lorem ipsum dolor sit amet consectetur adipiscing elit cursus fringilla phasellus,!',
           trimLines: 2,
           trimMode: TrimMode.Line,
           trimExpandedText: 'show less',
@@ -61,7 +61,7 @@ class UserReviewCard extends StatelessWidget {
                     ),
                     const SizedBox(height: CustomSizes.spaceBtwItems ),
                     const ReadMoreText(
-                      'The user interface of the app is quite intuitive. I was able to navigate and make purchases seamlessly. Great job! ',
+                      'Lorem ipsum dolor sit amet consectetur adipiscing elit cursus fringilla phasellus,! ',
                       trimLines: 2,
                       trimMode: TrimMode.Line,
                       trimExpandedText: 'show less',

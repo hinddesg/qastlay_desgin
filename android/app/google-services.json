@@ -1,0 +1,54 @@
+ {
+  "project_info": {
+    "project_number": "33236308739",
+    "project_id": "qastlay-cbe51",
+    "storage_bucket": "qastlay-cbe51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33236308739:android:f0ddde2b4cd0a50b678f36",
+        "android_client_info": {
+          "package_name": "com.example.qastlay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33236308739-i72olah32bchuj28k439qlvef8q90dul.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.qastlay",
+            "certificate_hash": "068a114bbb22023b5141140e9e27f8361f97a1cd"
+          }
+        },
+        {
+          "client_id": "33236308739-j1pmg3g8hls8q3pmng9cj99hrbfu4dra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeIls8mwOvC7DmjIrSWLuJ3AqBiYKKohg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33236308739-j1pmg3g8hls8q3pmng9cj99hrbfu4dra.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "33236308739-bgle093bpi0os9dv5957f8rtgrbjq45t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.qastlay"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

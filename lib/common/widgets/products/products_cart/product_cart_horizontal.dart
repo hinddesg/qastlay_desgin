@@ -10,18 +10,19 @@ import '../../../../utils/functions/helper_function.dart';
 import '../../custom_shapes/container/rounded_container.dart';
 import '../../icons/circular_icon.dart';
 import '../../images/rounded_image.dart';
-import '../../texts/brand_title_text_with_verified_icon.dart';
 import '../../texts/product_title_text.dart';
 
 class ProductCartHorizontal extends StatelessWidget {
-  const ProductCartHorizontal({super.key});
+  const ProductCartHorizontal({super.key, required this.index});
+
+  final int index;
 
   @override
   Widget build(BuildContext context) {
     final dark = CustomHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () => Get.to(() => const ProductDetailScreen()),
+      onTap: () => Get.to(() => ProductDetailScreen(index: index,)),
       child: Container(
         width: 310,
         padding: const EdgeInsets.all(1),
@@ -70,7 +71,7 @@ class ProductCartHorizontal extends StatelessWidget {
                     ProductTitleText(
                         title: 'Green Nike Half Sleeves Shirt', smallSize: true),
                     SizedBox(height: CustomSizes.spaceBtwItems / 2),
-                    BrandTitleWithVerifiedIcon(title: 'Nike'),
+                    // BrandTitleWithVerifiedIcon(title: 'Nike'),
                   ]),
                   const Spacer(),
                   Row(

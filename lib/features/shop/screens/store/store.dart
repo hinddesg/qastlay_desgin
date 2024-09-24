@@ -1,21 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:qastlay/common/widgets/appbar/appbar.dart';
-import 'package:qastlay/common/widgets/layouts/grid_layout.dart';
 import 'package:qastlay/common/widgets/products/cart/cart_menu_icon.dart';
-import 'package:qastlay/common/widgets/texts/section_heading.dart';
 import 'package:qastlay/features/shop/screens/store/widgets/category_tab.dart';
 import '../../../../common/widgets/appbar/tabbar.dart';
-import '../../../../common/widgets/custom_shapes/container/rounded_container.dart';
 import '../../../../common/widgets/custom_shapes/container/search_container.dart';
-import '../../../../common/widgets/images/circular_image.dart';
-import '../../../../common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/enums.dart';
-import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/functions/helper_function.dart';
-import '../brand/all_brands.dart';
 
 class Store extends StatelessWidget {
   const Store({super.key});
@@ -47,79 +38,22 @@ class Store extends StatelessWidget {
                   backgroundColor: CustomHelperFunctions.isDarkMode(context)
                       ? CustomColors.black
                       : CustomColors.white,
-                  expandedHeight: 440,
+                  expandedHeight: 200,
                   flexibleSpace: Padding(
                     padding: const EdgeInsets.all(CustomSizes.defaultSpace),
                     child: ListView(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-                      children: [
+                      children: const [
                         /// Search bar
-                        const SizedBox(height: CustomSizes.spaceBtwItems),
-                        const SearchContainer(
+                        SizedBox(height: CustomSizes.spaceBtwItems),
+                        SearchContainer(
                             text: 'Search in Store',
                             showBorder: true,
                             showBackground: false,
                             padding: EdgeInsets.zero),
-                        const SizedBox(height: CustomSizes.spaceEtwSections),
+                        SizedBox(height: CustomSizes.spaceEtwSections),
 
-                        ///Feature brand
-                        SectionHeading(
-                          title: 'Feature brand',
-                          onPressed:() => Get.to(() => const AllBrandsScreen()),
-                        ),
-                        const SizedBox(height: CustomSizes.spaceBtwItems / 1.5),
-                        GridLayout(
-                            itemCount: 4,
-                            mainAxisExtent: 88,
-                            itemBuilder: (_, index) {
-                              return GestureDetector(
-                                onTap: () {},
-                                child: RoundedContainer(
-                                  padding: const EdgeInsets.all(CustomSizes.sm),
-                                  showBorder: true,
-                                  backgroundColor: Colors.transparent,
-                                  child: Row(children: [
-                                    ///-- Icon
-                                    Flexible(
-                                      child: CircularImage(
-                                        isNetworkImage: false,
-                                        image: CustomImages.google,
-                                        backgroundColor: Colors.transparent,
-                                        overlayColor:
-                                            CustomHelperFunctions.isDarkMode(
-                                                    context)
-                                                ? CustomColors.white
-                                                : CustomColors.black,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                        width: CustomSizes.spaceBtwItems / 2),
-
-                                    /// Text
-                                    Expanded(
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          const BrandTitleWithVerifiedIcon(
-                                              title: 'Nike',
-                                              brandTextSize: TextSizes.large),
-                                          Text(
-                                            '256 products of mobile',
-                                            overflow: TextOverflow.ellipsis,
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .labelMedium,
-                                          ),
-                                        ],
-                                      ),
-                                    )
-                                  ]),
-                                ),
-                              );
-                            })
                       ],
                     ),
                   ),

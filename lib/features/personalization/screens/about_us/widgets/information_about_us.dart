@@ -1,6 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:iconsax/iconsax.dart';
-
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 
@@ -19,7 +17,6 @@ class InformationAboutUs extends StatelessWidget {
         const SizedBox(width: CustomSizes.sm),
         Text(text),
         const SizedBox(height: CustomSizes.spaceEtwSections),
-
       ],
     );
   }

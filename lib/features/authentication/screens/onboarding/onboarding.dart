@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qastlay/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:qastlay/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
 import 'package:qastlay/features/authentication/screens/onboarding/widgets/onboarding_nex_button.dart';
 import 'package:qastlay/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
@@ -6,7 +7,6 @@ import 'package:qastlay/features/authentication/screens/onboarding/widgets/onboa
 import 'package:qastlay/utils/constants/image_strings.dart';
 import 'package:qastlay/utils/constants/text_strings.dart';
 import 'package:get/get.dart';
-import '../../controllers_onboarding/onboarding_controller.dart';
 
 
 class OnBoardingScreen extends StatelessWidget {

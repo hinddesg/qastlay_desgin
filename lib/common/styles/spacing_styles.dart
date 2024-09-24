@@ -2,9 +2,7 @@ import 'package:flutter/cupertino.dart';
 import '../../utils/constants/sizes.dart';
 
 class CustomSpacingStyle {
-
   static const EdgeInsetsGeometry paddingWithAppBarHeight = EdgeInsets.only(
-
     top: CustomSizes.appBarHeight,
     left: CustomSizes.defaultSpace,
     bottom: CustomSizes.defaultSpace,

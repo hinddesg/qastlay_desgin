@@ -1,6 +1,12 @@
 class CustomTexts {
 
-// GLOBAL Texts
+  // -- GLOBAL Texts
+  static const String and = "and";
+  static const String skip = "Skip";
+  static const String done = "Done";
+  static const String submit = "Submit";
+  static const String appName = "T-Store";
+  static const String tContinue = "Continue";
 
 // OnBoarding Texts
   static const String onBoardingTitle1 = "Smooth Shopping Experience";
@@ -36,16 +42,20 @@ class CustomTexts {
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
 
-  //-- Authentication Headings Text
+
+  // -- Authentication Headings
   static const String loginTitle = "Welcome back";
-  static const String loginSubTitle = "Sign in with your email and password or continue with social media.";
-  static const String sighupTitle = "Let's create your account";
+  static const String loginSubTitle = "Discover Limitless Choices and Unmatched Convenience.";
+  static const String signupTitle = "Let’s create your account";
   static const String forgetPasswordTitle = "Forget password";
-  static const String forgetPasswordSubTitle = "Don't worry sometimes people can forget too, enter your email and we will send you a password reset link.";
+  static const String forgetPasswordSubTitle = "Don’t worry sometimes people can forget too, enter your email and we will send you a password reset link.";
   static const String changeYourPasswordTitle = "Password Reset Email Sent";
   static const String changeYourPasswordSubTitle = "Your Account Security is Our Priority! We've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
-  static const String confirmEmail ="Verify your email address!";
+  static const String confirmEmail = "Verify your email address!";
   static const String confirmEmailSubTitle = "Congratulations! Your Account Awaits: Verify Your Email to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
-  static const String emailNotReceivedMessage = "Didn't get the email? Check your junk/spam or resend it.";
+  static const String emailNotReceivedMessage = "Didn’t get the email? Check your junk/spam or resend it.";
+  static const String yourAccountCreatedTitle = "Your account successfully created!";
+  static const String yourAccountCreatedSubTitle = "Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!";
+
 
 }

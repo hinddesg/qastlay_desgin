@@ -20,8 +20,8 @@ class SubCategoriesScreen extends StatelessWidget {
             child: Column(
               children: [
                 ///heading
-                SectionHeading(
-                  title: 'Sport shirts',
+                SectionHeading(  
+                  title: 'Dell Laptop',
                   onPressed: () {},
                 ),
                 const SizedBox(
@@ -35,7 +35,7 @@ class SubCategoriesScreen extends StatelessWidget {
                     separatorBuilder: (context, index) =>
                         const SizedBox(width: CustomSizes.spaceBtwItems),
                     itemBuilder: (context, index) =>
-                        const ProductCartHorizontal(),
+                         ProductCartHorizontal(index: index,),
                   ), // ListView.separated
                 ), // SizedBox
               ],

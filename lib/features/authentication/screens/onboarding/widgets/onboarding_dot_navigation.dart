@@ -4,7 +4,7 @@ import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/device/device_utility.dart';
 import '../../../../../utils/functions/helper_function.dart';
-import '../../../controllers_onboarding/onboarding_controller.dart';
+import 'package:qastlay/features/authentication/controllers/onboarding/onboarding_controller.dart';
 
 class OnBoardingDotNavigation extends StatelessWidget {
   const OnBoardingDotNavigation({
