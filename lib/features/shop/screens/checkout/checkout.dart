@@ -64,6 +64,27 @@ class CheckoutScreen extends StatelessWidget {
                         const InformationDetails(),
                       ],
                     ),
+                      const InstallmentPlan(),
+                      const TotalOrder(text: 'Total price', price: '555',),
+                      const SizedBox (height: CustomSizes.spaceBtwItems),
+                      const TotalOrder(text: 'Total price after installment plan', price: '255',),
+                      const SizedBox(height: CustomSizes.spaceEtwSections),
+                      const SectionHeading(
+                        title: 'Payment Method',
+                        showActionButton: false,
+                      ),
+                      const SizedBox(height: CustomSizes.spaceBtwItems),
+                       Row(
+                        children: [
+                          const Image( width: 30,height: 30,fit: BoxFit.contain, image: AssetImage(CustomImages.payment)),
+                          const SizedBox(width: CustomSizes.md),
+                          Text('Cash Payment', style: Theme.of(context).textTheme.bodyLarge,),
+                        ],
+                      ),
+                      const SizedBox(height: CustomSizes.spaceEtwSections),
+                    const InformationDetails(),
+                    ],
+>>>>>>> 3701925079a95f591fbbff28f98eee4aa2f5520f
                   ),
                 ),
               ],
