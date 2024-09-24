@@ -40,7 +40,21 @@ class CustomImages {
   ///checked
   static const String checked = "assets/images/success/checked.png";
 
-  // // -- Animations
+  ///categories
+  static const String laptop = "assets/images/icons/laptop.png";
+  static const String pc = "assets/images/icons/pc.png";
+  static const String phone = "assets/images/icons/mobile.png";
+  static const String tablet = "assets/images/icons/tablet.png";
+  static const String memoryCard = "assets/images/icons/memory-card.png";
+
+
+
+
+
+
+
+
+   //// -- Animations
   // static const String productsIllustration = "assets/images/animations/sammy-line-workout.gif";
   // static const String productsSaleIllustration = "assets/images/animations/sammy-line-sale.png";
   // static const String staticSuccessIllustration = "assets/images/animations/sammy-line-success.png";

@@ -19,7 +19,6 @@ class CheckoutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     final dark = CustomHelperFunctions.isDarkMode(context);
 
     return Scaffold(
@@ -65,51 +64,6 @@ class CheckoutScreen extends StatelessWidget {
                         const InformationDetails(),
                       ],
                     ),
-=======
-        final dark = CustomHelperFunctions.isDarkMode(context);
-
-    return Scaffold(
-      appBar: CustomAppbar(
-        automaticallyImplyLeading: true,
-        title: Text('Order Reviews',
-            style: Theme.of(context).textTheme.headlineSmall),
-      ),
-      body:  SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(CustomSizes.defaultSpace),
-          child: Column(
-            children: [
-              const CartItems(showAddRemoveButtons: false,),
-              const SizedBox (height: CustomSizes.spaceEtwSections),
-              RoundedContainer(
-                backgroundColor: dark ? CustomColors.dark : CustomColors.white,
-                showBorder: true,
-                child: Padding(
-                  padding: const EdgeInsets.all(CustomSizes.defaultSpace),
-                  child: Column(
-                    children: [
-                      const InstallmentPlan(),
-                      const SizedBox (height: CustomSizes.spaceEtwSections),
-                      const TotalOrder(text: 'Total price', price: '555',),
-                      const SizedBox (height: CustomSizes.spaceBtwItems),
-                      const TotalOrder(text: 'Total price after installment plan', price: '255',),
-                      const SizedBox(height: CustomSizes.spaceEtwSections),
-                      const SectionHeading(
-                        title: 'Payment Method',
-                        showActionButton: false,
-                      ),
-                      const SizedBox(height: CustomSizes.spaceBtwItems),
-                       Row(
-                        children: [
-                          const Image( width: 30,height: 30,fit: BoxFit.contain, image: AssetImage(CustomImages.payment)),
-                          const SizedBox(width: CustomSizes.md),
-                          Text('Cash Payment', style: Theme.of(context).textTheme.bodyLarge,),
-                        ],
-                      ),
-                      const SizedBox(height: CustomSizes.spaceEtwSections),
-                    const InformationDetails(),
-                    ],
->>>>>>> 3701925079a95f591fbbff28f98eee4aa2f5520f
                   ),
                 ),
               ],
