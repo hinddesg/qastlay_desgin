@@ -18,60 +18,70 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              ///header
-               const PrimaryHeaderContainer(
-                child: Column(
-                  children: [
-                    /// Appbar
-                    CustomHomeAppbar(),
-                    SizedBox(height: CustomSizes.spaceEtwSections),
-                    /// Searchbar
-                    SearchContainer(text: 'Search in Store'),
-                    SizedBox(height: CustomSizes.spaceEtwSections),
-                    /// Heading
-                    Padding(
-                      padding: EdgeInsets.only(left: CustomSizes.defaultSpace),
-                      child: Column(
-                        children: [
-                          SectionHeading(
-                            title: 'Popular Categories',
-                            showActionButton: false,
-                            textColor: Colors.white,
-                          ),
-                          SizedBox(height: CustomSizes.spaceBtwItems),
-                        ],
-                      ),
-                    ),
-                    ///Categories
-                    HomeCategories(),
-                    SizedBox(height: CustomSizes.spaceEtwSections),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(CustomSizes.defaultSpace),
-                child: Column(
-                  children: [
-                    const PromoSlider(
-                      banners: [
-                        CustomImages.banner1,
-                        CustomImages.banner1,
-                        CustomImages.banner1,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ///header
+            const PrimaryHeaderContainer(
+              child: Column(
+                children: [
+                  /// Appbar
+                  CustomHomeAppbar(),
+                  SizedBox(height: CustomSizes.spaceEtwSections),
+
+                  /// Searchbar
+                  SearchContainer(text: 'Search in Store'),
+                  SizedBox(height: CustomSizes.spaceEtwSections),
+
+                  /// Heading
+                  Padding(
+                    padding: EdgeInsets.only(left: CustomSizes.defaultSpace),
+                    child: Column(
+                      children: [
+                        SectionHeading(
+                          title: 'Popular Categories',
+                          showActionButton: false,
+                          textColor: Colors.white,
+                        ),
+                        SizedBox(height: CustomSizes.spaceBtwItems),
                       ],
                     ),
-                    const SizedBox(height: CustomSizes.spaceEtwSections),
-                    /// Heading
-                    SectionHeading(
-                      title: 'Popular Products',
-                      onPressed: () => Get.to(() => const AllProducts()),
-                    ),
-                    const SizedBox(height: CustomSizes.spaceBtwItems),
-                    /// Wrapping ListView with a fixed height using SizedBox
-                   GridLayout(itemCount:controller.productModel.length,
-                       itemBuilder: (context, index)=> ProductCartVertical(index: index,)
+                  ),
+
+                  ///Categories
+                  HomeCategories(),
+                  SizedBox(height: CustomSizes.spaceEtwSections),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(CustomSizes.defaultSpace),
+              child: Column(
+                children: [
+                  const PromoSlider(
+                    banners: [
+                      CustomImages.banner1,
+                      CustomImages.banner1,
+                      CustomImages.banner1,
+                    ],
+                  ),
+                  const SizedBox(height: CustomSizes.spaceEtwSections),
+
+                  /// Heading
+                  SectionHeading(
+                    title: 'Popular Products',
+                    onPressed: () => Get.to(() => const AllProducts()),
+                  ),
+                  const SizedBox(height: CustomSizes.spaceBtwItems),
+
+                  /// Wrapping ListView with a fixed height using SizedBox
+                  GridLayout(
+                      itemCount: controller.productModel.length,
+                      itemBuilder: (context, index) {
+                        return ProductCartVertical(
+                            index: index,
+                        );
+                      }
                     // SizedBox(
                     //   height: 300, ///test test
                     //   child: ListView.separated(
@@ -79,15 +89,15 @@ class HomeScreen extends StatelessWidget {
                     //     separatorBuilder: (context, index) => const SizedBox(width: 20),
                     //     itemCount: controller.productModel.length,
                     //   ),
-                      //   child:  GridLayout(itemCount: 4, itemBuilder: (_,index)=>const ProductCartVertical(index: 0,))
-                      //   child:  GridLayout(itemCount: 4, itemBuilder: (_,index)=>const ProductCartVertical(index: 0,))
-                    ),
-                  ],
-                ),
+                    //   child:  GridLayout(itemCount: 4, itemBuilder: (_,index)=>const ProductCartVertical(index: 0,))
+                    //   child:  GridLayout(itemCount: 4, itemBuilder: (_,index)=>const ProductCartVertical(index: 0,))
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
+      ),
     );
   }
 }

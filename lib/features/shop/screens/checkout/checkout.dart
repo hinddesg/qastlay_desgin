@@ -42,7 +42,7 @@ class CheckoutScreen extends StatelessWidget {
                     padding: const EdgeInsets.all(CustomSizes.defaultSpace),
                     child: Column(
                       children: [
-                        const InstallmentPlan(),
+                        // const InstallmentPlan(),
                         const SizedBox (height: CustomSizes.spaceEtwSections),
                         const TotalOrder(text: 'Total price', price: '555',),
                         const SizedBox (height: CustomSizes.spaceBtwItems),

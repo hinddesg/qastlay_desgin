@@ -58,29 +58,29 @@ class LoginForm extends StatelessWidget {
             const SizedBox(height: CustomSizes.spaceBtwInputFields / 2),
 
             /// Remember Me & Forget Password
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                /// Remember Me
-                Row(
-                  children: [
-                    Obx(
-                          () => Checkbox(
-                        value: controller.rememberMe.value,
-                        onChanged: (value) => controller.rememberMe.value = !controller.rememberMe.value,
-                      ),
-                    ),
-                    const Text(CustomTexts.rememberMe),
-                  ],
-                ),
-
-                /// Forget Password
-                TextButton(
-                  onPressed: () => Get.to(() => const ForgetPassword()),
-                  child: const Text(CustomTexts.forgetPassword),
-                ),
-              ],
-            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     /// Remember Me
+            //     Row(
+            //       children: [
+            //         Obx(
+            //               () => Checkbox(
+            //             value: controller.rememberMe.value,
+            //             onChanged: (value) => controller.rememberMe.value = !controller.rememberMe.value,
+            //           ),
+            //         ),
+            //         const Text(CustomTexts.rememberMe),
+            //       ],
+            //     ),
+            //
+            //     /// Forget Password
+            //     TextButton(
+            //       onPressed: () => Get.to(() => const ForgetPassword()),
+            //       child: const Text(CustomTexts.forgetPassword),
+            //     ),
+            //   ],
+            // ),
             const SizedBox(height: CustomSizes.spaceBtwItems),
 
             /// Sign In Button
